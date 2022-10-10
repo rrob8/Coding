@@ -724,6 +724,11 @@ console.log(catMessage);
 console.log(acceptedAges);
 
 // Created a new branch js_youtube_practice
-
+var ourArray = [];
+//for (initialization; condition; final expression) {}
+for (var b=0; b<15; b++) {
+    ourArray.push(b);
+}
+console.log(ourArray);
 
 
