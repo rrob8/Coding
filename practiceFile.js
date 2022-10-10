@@ -723,7 +723,7 @@ var catMessage = "Cats are accepted at these ages:"
 console.log(catMessage);
 console.log(acceptedAges);
 
-
+// Created a new branch js_youtube_practice
 
 
 
