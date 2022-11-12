@@ -1,0 +1,74 @@
+var ourStr = `You shall not `
+ourStr += `Pass!!!`
+console.log(ourStr);
+
+Pletter = ourStr [ourStr.length -7];
+console.log(Pletter);
+// This is using bracket notation to access the letter at the index location, treating our string like an array
+var ourArray= ["Simpson", "J", 'Cat'];
+ourArray.push (['fat',8]);
+console.log(ourArray);
+pushpull = ourArray.pop();
+console.log(ourArray);
+console.log(pushpull);
+
+sweetMeat = [`sausage`,`chorizo`,`sopresata`];
+sweetMeat.unshift(`peperoni`);
+
+console.log(sweetMeat);
+
+var outerWear = "Tshirt";
+function myOutfit(){
+    var outerWear = 'sweater';
+    return outerWear;
+    }
+console.log(myOutfit()); // gives sweater
+console.log(outerWear); /* by using var to declare the variable in the function, we kept the scope local, so when the 
+second console.log for outerWear was made, it referenced the global variable giving Tshirt */
+
+function myNewOutfit(){
+    
+    return clothes;
+    var clothes = 'dress';}
+    console.log(myNewOutfit()); // gives undefined because we declared the clothes variable after the return statement
+
+    // 10.12.22 notes 9:45 pm to
+    var change = 0;
+    function taxes() {
+        return change;
+        // ??? 
+       // cannot declare any variable here after the return statement. Why?
+        ;
+    }
+    console.log(taxes());
+
+// If you do not place a return statement and tried to console.log the function, it would return undefined
+
+function caseInSwitch (val) {
+    var answer = ``;
+    switch (val) {
+        case 10:
+            answer ="Greater than 10";
+            break;
+        case (val <= 10):
+            answer ="Less than 10";
+            break;
+    default:
+        answer ="Please give a number"
+    }
+    return answer;
+}
+console.log(caseInSwitch(10));
+
+/* how can i set up a date that i want (not just the empty date) that can be shown in the console, for 
+example var dob = new Date(1995, 11, 24, 00, 00, 00); see page 136 */
+var dob = new Date(1995, 11, 24, 00, 00, 00);
+console.log(dob.toDateString());
+console.log(dob.getDate());
+// now it works, wtf
+
+var robbieDob = new Date('Nov 19, 1991, 23:12:00');
+console.log(robbieDob.toDateString());
+
+var oct17 = new Date();
+console.log(oct17.toTimeString());

@@ -3,6 +3,7 @@ console.log(myStr);
 
 var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
 console.log(myStr);
+
 // Tech decode Tutorials video explanation
 /* This is a multi line
 comment */
@@ -730,5 +731,41 @@ for (var b=0; b<15; b++) {
     ourArray.push(b);
 }
 console.log(ourArray);
+// iterate odd numbers with a for loop
+yourArray = [];
+for (var e=1; e < 10; e +=2){
+ yourArray.push(e);
+}
+console.log(yourArray);
+// count backwards with a for loop
+var backwardsArray = [];
+for (q=10; q>0 ; q-=2){
+    backwardsArray.push(q);
+}
+console.log(backwardsArray);
+// Iterate through an array with a for loop
+/* the loop checks the initialization which is g =0. then it checks if g is less than
+the length of the array ourArray (which is 4). Since it is less than 4 (true) it increments it (++)
+then we are saying (ourTotal = ourTotal + ourArr[g]), that is what "+=" does
+ourArr[g] means: give me the value of ourArr at a given index.
+if g = 0, then ourArr[0] will give 9, since it is at index 0. */
 
+ var ourArr = [9,10,11,12];
+ var ourTotal = 0;
+ for (var g = 0; g < ourArr.length; g++) {
+ourTotal += ourArr[g];
+ }
+ console.log(ourTotal);
 
+// Nest for loops - 2 hr 19minutes
+function multiplyAll(arr) {
+    var product =1;
+    for (var i=0; i < arr.length; i++){
+        for (var j=0; j < arr[i].length; j++)
+    product *= arr[i][j];
+    }
+    return product;
+}
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+console.log(product);
