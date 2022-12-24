@@ -16,7 +16,12 @@ const is a variable that we never change */
 const name = 11;
 
 // figure out why we can't get console.log to return name//
+/*
+Ctrl + Alt + N is how you run the code of the file you have open
+*************************************************************
 
+
+*/
 //same issue with the hotel example//
 // Ctrl +B to show or hibe primary sidebar for visual studio code//
 /* how to use an ESCAPE CHARACTER to use quotes within quotes, if the quotes are the same
@@ -26,8 +31,8 @@ use a BACKSLASH*/
 
 
 
-//how to clear the terminal = "cls" + enter//
-
+//how to clear the terminal = "cls" + enter/
+//*******************************************
 
 
 
@@ -604,104 +609,6 @@ myPlants array [] bracket notation
 console.log(secondTree); // returns pine 
 
 
-
-
-
-
-
-// Record Collection
-var collection = {  // create an object called collection
-    "Genre1":"NuMetal",
-    "NuMetal": {       // has multiple properties
-        "Artists":{
-    "System of a Down": {
-        "albums": {
-     "Steal This Album!":[
-    "Chic 'N' Stu",
-    "Innervison",
-    "Bubbles",
-    "Boom!",
-    "Nuguns",
-    "A.D.D.(American Dream Denial)",
-    "Mr Jack",
-    "I-E-A-I-A-I-O",
-    "36",
-    "Pictures",
-    "Highway Song",
-    "Fuck the System",
-    "Ego Brain",
-    "Thetawaves",
-    "Roulette",
-    "Streamline"]
-}
-}
-}
-}
-};
-/* Second genre
-"Genre2":"Heavy Metal",   
-"Heavy Metal": {
-    // here the artist1 element is missing
-     "album":"City of Evil",
-     
-     "tracks":[
-        "Beast and the Harlot",
-        "Burn it Down",
-        "Blinded in Chains",
-        "Bat Country",
-        "Trashed and Scattered",
-        "Seized the Day",
-        "Sidewinder",
-        "The Wicked End",
-        "Strength of the World",
-        "Betrayed",
-        "M.I.A"]  
-*/
-var collectionCopy =JSON.parse(JSON.stringify(collection));
-
-function updateRecords(Genre,Artists,Artist,Song){ //pass in the id, property, value and update the record collection
-     if (Artist ==="") {
-        delete collection[Genre][Artists][Artist];
-     }
-    /* }  else if (prop === "") {
-        collection[id][prop] = collection[id][prop] || [];
-        collection[id][prop].push(value);
-    }   */
-    else if (Artist.length === 0) {
-        collection[Genre][Artists][Artist] =''
-    }
-    /* }  else {
-        collection[id][prop] = value; */
-                                    // if we have an empty string for the value it should delete that property
-                                        // if we have a property of tracks, instead of changing all tracks, it should add it onto the end
-    return collection;
-};
-
-console.log(updateRecords("NuMetal","Artists","Deftones"));
-// now figure out how to add artist but put it in the position above tracks
-
-// Hotel example from javascript book Duckett 9.16.22
-var hotel = {
-    name: 'Quay',
-    rooms: 40,
-    booked: 25,
-    checkAvailability: function() { 
-        return "Rooms Available:"+ " "+ (this.rooms - this.booked);
-    } 
-}
-var hotelName =hotel.name;
-console.log(hotelName);
-
-console.log(hotel.checkAvailability());
-// to access the function that is associated with checkAvailability, you need to state "()"
-// we gave this function the Parameters of rooms and booked#. This gives us a return value of the balance of the rooms left
-
-
-
-
-
-
-
 // Iternate with While Loops
 var myLoopArray = [];
 var i = 0;
@@ -712,5 +619,19 @@ i++;
 console.log(myLoopArray); /*notice that the array was EMPTY when we started. The loop pushed i onto 
 the array FIRST, then incremented, then pushed it, then incremented 1-->2, then ect.
 */
+
+var ourArr = [9,10,11,12];
+var ourTotal = 0;
+
+for (var i = 0; i < ourArr.length; i++) {
+ourTotal += ourArr[i];
+}
+// check if i is less than the length of the ourArr array
+// if yes, run the function, then +1 to i
+//function says to add the index number of the ourArr array to ourTotal variable
+//the for loop will run 4 times across the length of the array, adding 9+10+11+12
+//for loop will stop once it has run 4 loops (when i =4 )
+// console.log the value of ourTotal 
+console.log(ourTotal);
 
 
